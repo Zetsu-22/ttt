@@ -1,0 +1,379 @@
+:root {
+  --bg: #f5f7fb;
+  --surface: rgba(255, 255, 255, 0.82);
+  --text: #101828;
+  --muted: #667085;
+  --brand: #7c3aed;
+  --brand-dark: #5b21b6;
+  --line: rgba(16, 24, 40, 0.08);
+  --shadow: 0 20px 60px rgba(15, 23, 42, 0.12);
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  margin: 0;
+  font-family: "Inter", sans-serif;
+  color: var(--text);
+  background:
+    radial-gradient(circle at top left, rgba(124, 58, 237, 0.16), transparent 28%),
+    radial-gradient(circle at top right, rgba(56, 189, 248, 0.12), transparent 22%),
+    var(--bg);
+}
+
+img {
+  max-width: 100%;
+}
+
+.glass-nav {
+  background: rgba(255, 255, 255, 0.75);
+  backdrop-filter: blur(14px);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.6);
+}
+
+.navbar-brand,
+.nav-link {
+  color: var(--text);
+}
+
+.nav-link:hover,
+.nav-link:focus {
+  color: var(--brand);
+}
+
+.hero-section {
+  padding: 9rem 0 5rem;
+}
+
+.hero-card,
+.product-card,
+.benefit-card,
+.payment-card,
+.communication-card,
+.content-card,
+.seo-card {
+  border: 1px solid var(--line);
+  border-radius: 24px;
+  background: var(--surface);
+  box-shadow: var(--shadow);
+}
+
+.hero-card {
+  padding: 1.25rem;
+}
+
+.hero-card-top {
+  display: flex;
+  gap: 0.4rem;
+  margin-bottom: 1rem;
+}
+
+.hero-card-top span {
+  width: 0.75rem;
+  height: 0.75rem;
+  border-radius: 50%;
+  background: #d0d5dd;
+}
+
+.hero-card-body {
+  padding: 1rem;
+}
+
+.book-preview {
+  display: flex;
+  justify-content: center;
+  gap: 1rem;
+}
+
+.book-cover,
+.product-cover {
+  border-radius: 20px;
+  min-height: 200px;
+  box-shadow: inset 0 1px 0 rgba(255,255,255,0.35);
+}
+
+.book-cover {
+  width: 110px;
+  height: 160px;
+}
+
+.product-cover {
+  min-height: 220px;
+}
+
+.gradient-1 { background: linear-gradient(135deg, #7c3aed, #c084fc); }
+.gradient-2 { background: linear-gradient(135deg, #0f766e, #2dd4bf); }
+.gradient-3 { background: linear-gradient(135deg, #ea580c, #fdba74); }
+.gradient-4 { background: linear-gradient(135deg, #1d4ed8, #93c5fd); }
+
+.feature-box,
+.stat-card,
+.info-chip,
+.mini-card,
+.checkout-box,
+.cart-item {
+  border: 1px solid var(--line);
+  background: rgba(255,255,255,0.72);
+  border-radius: 20px;
+}
+
+.feature-box {
+  padding: 1.25rem;
+}
+
+.feature-box ul li + li {
+  margin-top: 0.5rem;
+}
+
+.hero-stats .stat-card {
+  padding: 1rem;
+  text-align: center;
+  height: 100%;
+}
+
+.stat-card strong {
+  display: block;
+  font-size: 1.15rem;
+}
+
+.stat-card span {
+  color: var(--muted);
+  font-size: 0.9rem;
+}
+
+.section-pad {
+  padding: 5rem 0;
+}
+
+.section-light {
+  background: rgba(255, 255, 255, 0.46);
+}
+
+.section-dark {
+  background: linear-gradient(135deg, #0f172a, #1e293b);
+}
+
+.section-heading {
+  margin-bottom: 1.5rem;
+}
+
+.section-kicker {
+  display: inline-block;
+  margin-bottom: 0.75rem;
+  color: var(--brand);
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  font-size: 0.8rem;
+}
+
+.narrow {
+  max-width: 720px;
+}
+
+.badge-soft,
+.info-chip,
+.btn-filter,
+.checkout-badge,
+.product-tag {
+  border-radius: 999px;
+}
+
+.badge-soft {
+  background: rgba(124, 58, 237, 0.12);
+  color: var(--brand);
+  padding: 0.7rem 1rem;
+}
+
+.info-chip {
+  text-align: center;
+  padding: 1rem;
+  font-weight: 600;
+  height: 100%;
+}
+
+.btn-brand {
+  background: linear-gradient(135deg, var(--brand), #9333ea);
+  border: 0;
+  color: #fff;
+}
+
+.btn-brand:hover,
+.btn-brand:focus {
+  background: linear-gradient(135deg, var(--brand-dark), var(--brand));
+  color: #fff;
+}
+
+.catalog-filters .btn-filter {
+  border: 1px solid var(--line);
+  background: rgba(255,255,255,0.8);
+  padding: 0.65rem 1rem;
+}
+
+.catalog-filters .btn-filter.active {
+  background: var(--text);
+  color: #fff;
+}
+
+.product-card {
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  transition: transform 0.25s ease, box-shadow 0.25s ease, opacity 0.25s ease;
+}
+
+.product-card:hover {
+  transform: translateY(-6px);
+}
+
+.product-body {
+  padding: 1.25rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+  flex: 1;
+}
+
+.product-tag {
+  align-self: flex-start;
+  padding: 0.45rem 0.8rem;
+  background: rgba(124, 58, 237, 0.1);
+  color: var(--brand);
+  font-size: 0.8rem;
+  font-weight: 700;
+}
+
+.catalog-item.hidden {
+  display: none;
+}
+
+.benefit-card,
+.content-card,
+.seo-card,
+.payment-card,
+.communication-card {
+  padding: 1.5rem;
+  height: 100%;
+}
+
+.benefit-icon {
+  width: 3rem;
+  height: 3rem;
+  border-radius: 16px;
+  display: grid;
+  place-items: center;
+  margin-bottom: 1rem;
+  background: rgba(124, 58, 237, 0.12);
+  color: var(--brand);
+  font-weight: 800;
+}
+
+.mini-card {
+  padding: 1rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0.35rem;
+}
+
+.mini-card span,
+.text-secondary,
+.footer-list li,
+.footer-list a,
+.cart-empty {
+  color: var(--muted) !important;
+}
+
+.checkout-box {
+  padding: 1.25rem;
+}
+
+.checkout-badge {
+  padding: 0.4rem 0.8rem;
+  background: rgba(124, 58, 237, 0.1);
+  color: var(--brand);
+  font-weight: 700;
+}
+
+.cart-items {
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+}
+
+.cart-item {
+  padding: 0.9rem 1rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 1rem;
+}
+
+.cart-item strong {
+  display: block;
+}
+
+.contact-form .form-control {
+  border-radius: 14px;
+  padding: 0.85rem 1rem;
+  border-color: rgba(16, 24, 40, 0.12);
+}
+
+.contact-form .form-control:focus {
+  border-color: rgba(124, 58, 237, 0.5);
+  box-shadow: 0 0 0 0.25rem rgba(124, 58, 237, 0.12);
+}
+
+.form-feedback {
+  display: none;
+  margin-top: 0.9rem;
+  padding: 0.9rem 1rem;
+  border-radius: 14px;
+  background: rgba(16, 185, 129, 0.12);
+  color: #047857;
+  font-weight: 600;
+}
+
+.footer-section {
+  padding: 3rem 0;
+  background: #fff;
+  border-top: 1px solid var(--line);
+}
+
+.footer-list li + li {
+  margin-top: 0.5rem;
+}
+
+.footer-list a {
+  text-decoration: none;
+}
+
+@media (max-width: 991.98px) {
+  .hero-section {
+    padding-top: 7.5rem;
+  }
+}
+
+@media (max-width: 767.98px) {
+  .section-pad {
+    padding: 4rem 0;
+  }
+
+  .hero-section {
+    padding-bottom: 4rem;
+  }
+
+  .book-preview {
+    gap: 0.6rem;
+  }
+
+  .book-cover {
+    width: 88px;
+    height: 132px;
+  }
+}
